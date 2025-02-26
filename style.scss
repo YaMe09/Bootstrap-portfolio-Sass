@@ -1,0 +1,220 @@
+/* Colors */
+$primaryColor:#620819;
+$secondaryColor:#000;
+$tertiaryColor:#FFE0E6;
+
+/* Fonts */
+$fontFamily: 'Dynalight', cursive;
+$fontFamily2: 'Lora', serif;
+
+/*images*/
+$homeBackground: url(./images/bagground.png);
+
+
+.navbar-brand {
+  font-family: $fontFamily;
+  color: $primaryColor;
+  transform: scale(1.2);
+}
+
+.navbar-brand:hover {
+  color: $primaryColor;
+  opacity: 1;
+}
+.nav-link{
+    font-family: $fontFamily2;
+    color: $primaryColor;
+}
+
+.navbar-toggler{
+    background-color: $tertiaryColor;
+    color: $primaryColor;
+}
+.navbar-toggler-icon{
+    background-color: $primaryColor;
+}
+
+.home {
+    background-image: $homeBackground;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-family: $fontFamily;
+    color: $primaryColor;
+}
+
+h3, .row {
+    font-family: $fontFamily2;
+}
+.typing {
+    color: $primaryColor;
+}
+h3 span {
+    color: $primaryColor;
+    font-family: $fontFamily2;
+}
+
+p{
+    font-family: $fontFamily2;
+}
+.btn{
+    color: $secondaryColor;
+    font-family: $fontFamily2;
+    border: 3px solid $primaryColor;
+    padding: 10px 65px;
+    border-radius: 30px;
+    text-decoration: none;
+}    
+
+.btn:hover{
+    background-color: $primaryColor;
+    opacity: 1;
+  }
+.icon i:hover, .card:hover{
+    color: $primaryColor;
+    transform: scale(1.2);
+}
+.card-title{
+    color: $primaryColor;
+}
+
+#stil{
+    border-bottom: 2px solid $primaryColor;
+    width: 55px;
+}
+#stils{
+    border-bottom: 2px solid $primaryColor;
+    width: 35px;
+}
+
+#vid{
+    width: 700px;
+    height: 350px;
+}
+#vids{
+    border-radius: 25px;
+    border: 2px solid $primaryColor;
+}
+h2, h4, h5{
+    font-family: $fontFamily2;
+    color: $primaryColor;
+}
+.timeline{
+    font-family: $fontFamily2;
+}
+.container{
+    font-family: $fontFamily2;
+}
+.icon{
+    color: $primaryColor;
+}
+input, textarea{
+    font-family: $fontFamily2;
+  border: 1px solid $primaryColor;
+}
+
+.projekt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    overflow: hidden;
+    position: relative;
+    flex: 1 1 40rem;
+}
+
+.scope {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    transform-style: preserve-3d;
+    animation: slid 30s linear infinite;
+}
+
+.scope span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+
+.scope span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+.scope span:hover img {
+    transform: translateY(-50px) scale(1.7);
+}
+.modal {
+    display: none; /* Skjult som standard */
+    position: fixed; /* Bliver på plads */
+    z-index: 1; /* Oven på alt andet */
+    right: 0;
+    top: 0;
+    width: 100%; /* Fuldt bredde */
+    height: 100%; /* Fuldt højde */
+    overflow: auto; /* Aktiverer scroll hvis nødvendigt */
+    background-color: rgb(0,0,0); /* Sort baggrund */
+    background-color: rgba(0,0,0,0.4); /* Sort med lidt gennemsigtighed */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@keyframes slid {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+/* Media Queries for responsivitet */
+@media (min-width: 768px) {
+    .modal-content {
+        margin: 15% auto; /* Mere plads på større skærme */
+        padding: 40px; /* Mere padding på større skærme */
+    }
+}
+
+@media (min-width: 1024px) {
+    .modal-content {
+        margin: 10% auto; /* Justeret margin for store skærme */
+        padding: 60px; /* Mere padding for store skærme */
+    }
+}
